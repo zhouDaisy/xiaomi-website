@@ -1,4 +1,6 @@
 $(function(){
+
+//商品搜索
 	var $hide_div = $(".hide_div");
  $(".hide_click").hover(function(){
  	$hide_div.slideDown(700);
@@ -24,13 +26,36 @@ $("#search input").focus(function(){
  	 });
 
 
- //标签切换
+ //导航标签切换
   $("#logo_box nav ul li").each(function(index){
-     $(this).mousemove(function(){
-    	$("#logo_nav_content .selected").removeClass("selected");
-    	$("#logo_nav_content .logo_nav_content").eq(index).addClass("selected");
- 
-    });
+  	var liNode = $(this);
+  	liNode.mouseover(function(){
+  		timeroutid = setTimeout(function(){
+  			$("#logo_nav_content .selected").removeClass("selected");
+	    	$("#logo_nav_content .logo_nav_content").eq(index).addClass("selected");
+  		},200);  	
+    })
+   }).mouseout(function(){
+    	clearTimeout(timeroutid);
+    	$("#logo_nav_content .selected").removeClass("selected");	
+    });   
+  
+  //侧边导航
+  $("#second_nav nav ul li").each(function(index){
+  	var liNode = $(this);
+  	liNode.mouseover(function(){
+
+  		$("#second_nav_content .lists_selected").removeClass("lists_selected");
+  		liNode.addClass("selected");
+  		$("#second_nav_content .lists").eq(index).addClass("lists_selected");
+
+  	}).mouseout(function(){
+  		$("#second_nav .selected").removeClass("selected");
+  	});
+  	$("#sidebar").mouseleave(function(){
+        $("#second_nav_content .lists_selected").removeClass("lists_selected");
+  	});
   });
+
 
  });

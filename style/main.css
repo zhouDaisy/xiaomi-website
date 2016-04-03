@@ -154,7 +154,7 @@
 	border:1px solid #FF6709;
 	border-top: none;
 	background-color: #fff;
-	z-index: 10;
+	z-index: 22;
 }
 #search_result li{
 	margin:10px 20px;
@@ -169,17 +169,23 @@
     float: right;
     color: #B0B0B0;
 }
-.logo_nav_content{
+.logo_nav_content {
+	display: none;
+}
+#logo_nav_content{
+	background-color: #fff;
+	position: absolute;
+	z-index: 15;
+	width: 100%;
+}
+#logo_nav_content .selected{
 	padding-left: 55px;
 	box-shadow: 0 5px 10px #EBEBEB;
 	border-bottom: 1px solid #E0E0E0;
 	border-top: 1px solid #E0E0E0;
-	width: 100%;
 	height: 229px;
-	display: none;
-}
-#logo_nav_content .selected{
 	display: block;
+	z-index: 20;
 }
 .logo_nav_img{
 	float: left;
@@ -202,4 +208,104 @@
 	font-style: normal;
 	font-size: 12px;
 	color: #FF6709;
+}
+#content{
+	position: relative;
+	width: 1226px;
+	margin:0 auto;
+	padding-right: 6px;
+	z-index: 14;
+}
+#ad{
+	width: 100%;
+	position: relative;
+}
+#ad_loop{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 458px;
+}
+#second_nav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 235px;
+	background-color: #000;
+	padding:19px 0;
+	z-index: 4;
+	filter:alpha(opacity=50);
+	-webkit-opacity:0.5 ;
+	-moz-opacity:0.5 ;
+	-ms-opacity:0.5 ;
+	-o-opacity:0.5 ;
+	opacity:0.5 ;
+
+}
+
+#second_nav li{
+	float: left;
+	padding: 14px 23px 14px 28px;
+	width: 184px;
+}
+#second_nav .selected{
+	background-color: #FF6709;
+}
+#second_nav a{
+	display: block;
+	color: #fff;
+	float: left;
+	margin-right: 5px;
+	font-size: 14px;
+}
+#second_nav i{
+	color: #fff;
+	font-weight: 800;
+	display: block;
+	float: right;
+    height: 14px;
+}
+#second_nav_content{
+	position: absolute;
+	left: 235px;
+	top: 0;
+    z-index: 6;
+    width: 300px;
+	height: 458px;
+}
+#second_nav_content .lists{
+	width: 100%;
+	height:458px;
+	display: none;
+}
+#second_nav_content .lists_selected{
+	display: block;
+	border-top: 1px solid #E0E0E0;
+	background-color: #fff ;
+	box-shadow: 0 10px 0px #EBEBEB;
+}
+#ad_loop{
+	position: relative;
+	z-index: 1;
+}
+#ad_imgs img{
+	position: absolute;
+}
+#pages{
+	position: absolute;
+	z-index: 2;
+	bottom: 23px;
+	right:33px;
+}
+#pages li{
+    float: left;
+    border:1px solid #45474a;
+	border-radius: 100%;
+	width: 7px;
+	height: 7px;
+	margin-right: 10px;
+	background-color: #45474a;
+
 }
