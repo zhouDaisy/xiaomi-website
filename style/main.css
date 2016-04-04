@@ -234,14 +234,9 @@
 	left: 0;
 	width: 235px;
 	background-color: #000;
-	padding:19px 0;
+	padding:20px 0;
 	z-index: 4;
-	filter:alpha(opacity=50);
-	-webkit-opacity:0.5 ;
-	-moz-opacity:0.5 ;
-	-ms-opacity:0.5 ;
-	-o-opacity:0.5 ;
-	opacity:0.5 ;
+	background:rgba(0,0,0,0.5);
 
 }
 
@@ -271,14 +266,15 @@
 	position: absolute;
 	left: 235px;
 	top: 0;
-    z-index: 6;
     width: 300px;
-	height: 458px;
+	height: 459px;
 }
 #second_nav_content .lists{
 	width: 100%;
 	height:458px;
 	display: none;
+	position: absolute;
+	z-index: 7;
 }
 #second_nav_content .lists_selected{
 	display: block;
@@ -297,7 +293,7 @@
 	position: absolute;
 	z-index: 2;
 	bottom: 23px;
-	right:33px;
+	right:32px;
 }
 #pages li{
     float: left;
@@ -306,6 +302,97 @@
 	width: 7px;
 	height: 7px;
 	margin-right: 10px;
-	background-color: #45474a;
-
+	background-color: #7B7B7C;
+}
+#pages .selected{
+	background-color: #D9D9DA;
+}
+.btn{
+    width: 41px;
+    height: 69px;  
+	background: rgba(0,0,0,0.3);  
+    position: absolute;
+    text-align: center;
+    z-index: 4;
+    display: none;
+    cursor: pointer;
+}
+#ad:hover .btn{	
+    display: block;
+}
+.prev i,.next i{
+	color: #fff;
+	font-style: none;
+	font-size: 28px;
+	line-height: 69px;
+}
+#ad .prev{
+	left: 235px;
+	top: 229px;
+}
+#ad .next{
+    right: 0;
+    top: 229px;
+}
+#s_ad{
+	margin-top: 15px;
+}
+#s_logo{
+	background-color: #5f5750;
+	height:150px;
+	float: left;
+	line-height: 20px;
+	padding: 10px;
+	position: relative;
+	width: 216px;
+}
+#s_logo .content{
+   float: left;
+   border-right: 1px solid #665e57;
+   border-bottom: 1px solid #665e57;
+   padding-left: 7px;
+   height: 78px;
+   width: 63px;
+   text-align: center;
+   font-size: 14px;
+}
+#s_logo .right{
+	border-right: none;
+}
+#s_logo .bottom{
+	border-bottom: none;
+}
+#s_logo a{
+	display: block;
+	color: #cfcdcb;
+	text-align: center;
+	float: left;
+}
+#s_logo a:hover{
+	color: #fff;
+}
+#s_logo img{
+	margin-top: 10px;
+}
+#s_logo .null{
+	background-color: #5f5750;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+}
+#null1{
+    top:83px;
+    left: 75px;
+}
+#null2{
+	top:83px;
+	right: 78px;
+}
+#s_img{
+	float: left;
+}
+#s_img img{
+	width: 315px;
+	height: 170px;
+	margin-left: 12px;
 }
