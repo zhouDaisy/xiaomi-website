@@ -107,5 +107,45 @@ pagesNode.eq(0).addClass("selected");
     	timer = setInterval(autoplay,3000);
     });
 
+//小米明星单品
+
+   $("#star_next,#star_prev").click(function(){
+   	 auto();
+   });
+
+
+//自动轮播
+   var timer2 = setInterval(auto,4000),
+       a = 0;
+    
+   function auto(){
+   	  $("#star_right .selected").removeClass("selected").siblings().addClass("selected");
+    if(a == 0){
+   	  $("#star_content").animate({"left":"-1225px"},1000);
+   	  a = 1;
+   	}else{
+      $("#star_content").animate({"left":"0px"},1000);
+      a = 0;
+   	}
+   }
+
+  //鼠标经过，停止自动轮播
+  
+   $("#star").hover(function(){
+   	   clearInterval(timer2);
+   },function(){
+       timer2 = setInterval(auto,4000);
+   });
+
+//鼠标滑过，橘色方块上移
+   $(".right li").hover(function(){
+   	$(this).children(".absolut").slideDown();
+   	
+   },function(){
+   	$(this).children(".absolut").slideUp();
+
+   });
+   
 
  });
+
