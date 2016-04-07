@@ -138,14 +138,28 @@ pagesNode.eq(0).addClass("selected");
    });
 
 //鼠标滑过，橘色方块上移
-   $(".right li").hover(function(){
-   	$(this).children(".absolut").slideDown();
-   	
-   },function(){
-   	$(this).children(".absolut").slideUp();
+
+   $(".right li").on({
+   	 mouseenter:function(){
+   	    // console("111");
+   	    $(this).children(".absolut").css("height","94px")
+   }, mouseleave:function(){
+   	    $(this).children(".absolut").css("height","0px")
+   	    
+   	    
+
+  }
+   });
+
+
+ //标签切换
+   $("#groups .header li").hover(function(index){
+       $(this).addClass("selected").siblings().removeClass("selected");
+       var index = $(this).index();
+       $("#groups .things div").eq(index).addClass("right").siblings().removeClass("right");
 
    });
-   
+
 
  });
 
