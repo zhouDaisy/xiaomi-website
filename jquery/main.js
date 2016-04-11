@@ -137,6 +137,19 @@ pagesNode.eq(0).addClass("selected");
        timer2 = setInterval(auto,4000);
    });
 
+
+//鼠标滑过 上移
+
+ $(".container li,#thiss .father").hover(function(){
+ 	var liMe = $(this);
+ 	liMe.animate({"marginTop":"-5px"},200);
+ 	liMe.addClass("hover_me").siblings().removeClass("hover_me");
+ 	
+ },function(){
+ 	$(this).animate({"marginTop":"0px"},200);
+ 	$(".container .hover_me").removeClass("hover_me");
+ });
+
 //鼠标滑过，橘色方块上移
 
    $(".right li").on({
@@ -145,9 +158,6 @@ pagesNode.eq(0).addClass("selected");
    	    $(this).children(".absolut").css("height","94px")
    }, mouseleave:function(){
    	    $(this).children(".absolut").css("height","0px")
-   	    
-   	    
-
   }
    });
 
@@ -160,6 +170,70 @@ pagesNode.eq(0).addClass("selected");
 
    });
 
+
+//four_box轮播
+
+  $("#thiss .father").each(function(){
+     $(this).on({
+      mouseenter:function(){
+         $(this).find(".btn_t").css({"display":"block"});
+         $(this).addClass("hit");
+         autoplay_t();
+     },mouseleave:function(){
+         $(this).find(".btn_t").css({"display":"none"});
+         $(this).removeClass("hit");
+     }
+
+     })
+ })
+
+
+
+function autoplay_t(){
+//four_box 小轮播
+    var con_t = $(".hit .container_t li");
+    var box_s = $(".hit .box_t li span");
+//焦点轮播
+    box_s.click(function(){
+       var index = $(this).parent().index();
+        $(".hit .box_t li .chosed").removeClass("chosed");
+        $(this).addClass("chosed");
+
+        $(".hit .container_t .selected").removeClass("selected");
+        con_t.eq(index).addClass("selected");
+    });
+
+//按钮轮播
+    var  a = 0;
+    
+    //核心函数
+    function  four_auto(){
+      $(".hit .box_t li .chosed").removeClass("chosed");
+        $(".hit .box_t li").eq(a).children("span").addClass("chosed");
+        
+        $(".hit .container_t .selected").removeClass("selected");
+        con_t.eq(a).addClass("selected");
+    }
+
+    //下一个
+    $(".hit .next_t").click(function(){
+        a++;
+
+        if( a == 4){
+          a = 0;
+        }
+        four_auto();
+    });
+
+    //上一个
+    $(".hit .prev_t").click(function(){
+         a--;
+         if(a == -1){
+           a = 3;
+         }
+         four_auto();
+    });
+}
 
  });
 

@@ -2,6 +2,7 @@
 	background-color: #333;
 	height: 40px;
 	font-size: 12px;
+	font-weight: 800;
 }
 #nav_header {
 	float: left;
@@ -205,7 +206,6 @@
 	margin-bottom:5px;
 }
 .logo_nav_img i{
-	font-style: normal;
 	font-size: 12px;
 	color: #FF6709;
 }
@@ -322,7 +322,6 @@
 }
 .prev i,.next i{
 	color: #fff;
-	font-style: none;
 	font-size: 28px;
 	line-height: 69px;
 }
@@ -391,11 +390,12 @@
 }
 #s_img{
 	float: left;
+	font-size: 0;
 }
 #s_img img{
-	width: 312px;
+	width: 316px;
 	height: 170px;
-	margin-left: 12px;
+	margin-left: 14px;
 }
 #star{
 	float: left;
@@ -451,26 +451,25 @@
 	margin-bottom: 10px;
 }
 #star_content i{
-	font-style: normal;
 	color: #b0b0b0;
 }
 #star_content .price{
 	color: #FF6709;
 	margin-top: 20px;
 }
-#star_content .orange{
+.orange{
 	border-top: 1px solid #FF6709;
 }
-#star_content .green{
+.green{
 	border-top: 1px solid #83c44e;
 }
-#star_content .blue{
+.blue{
 	border-top: 1px solid #2196f3;
 }
-#star_content .red{
+.red{
 	border-top: 1px solid #e53935;
 }
-#star_content .sky{
+.sky{
 	border-top: 1px solid #00c0a5;
 	margin-right: 0;
 }
@@ -537,12 +536,11 @@
 	margin-left: 13px;
 	position: relative;
  }
- .container li:hover{
-    box-shadow: 0 8px 10px #B0B0B0;
-    margin-top: -8px;
+ .container .hover_me{
+    box-shadow: 0 10px 15px #d1d0ce;
  }
  .end_one:hover{
-    margin-bottom: 21px !important;
+    margin-bottom: 18px !important;
  }
  #floors .meta{
  	color: #fff;
@@ -566,7 +564,6 @@
  	margin-bottom: 10px;
  }
  #floors i{
- 	font-style: normal;
  	font-size: 14px;
  	color: #FF6709;
  }
@@ -626,9 +623,179 @@
 #groups .things .right{
 	display: block;
 }
-#hot{
-	float: left;
+#classify .four_box{
+    clear: both;
+	width: 1225px;
+	margin:0 auto;
+	padding-top: 30px;
+
 }
-#hot li{
+#classify .four_box ul{
+	margin-left: -15px;
+}
+#classify .four_box li{
+	background-color: #fff;
+	color: #333333;
 	float: left;
+	width: 	296px;
+    height: 415px;
+    margin-left: 14px;
+}
+#hot .assess{
+	height: 64px;
+	line-height: 23px;
+	font-size: 14px;
+	margin: 32px 28px 32px 28px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+#hot i{
+	color: #b0b0b0;
+	display: block;
+	margin-left: 28px;
+	font-size: 12px;
+}
+#hot .tname{
+	display: inline-block;
+	margin-left: 28px;
+	margin-right: 8px;
+	margin-top: 17px;
+	font-size: 12px;
+	font-weight: normal;
+}
+#hot p span{
+	display: inline-block;
+	color: #FF6709;
+	padding-left: 8px;
+	border-left: 1px solid #000;
+	font-size: 12px;
+}
+#thiss .things li{
+	height: 419px ;
+	overflow: hidden;
+}
+
+#thiss .container_t li{
+	text-align: center;
+	display: none;
+	cursor: pointer;
+
+}
+#thiss .container_t .selected{
+	display: block;
+}
+#thiss .header_t{
+	color: #FF6709;
+	font-size: 16px;
+	margin:50px 0px 24px 135px;
+}
+#thiss .container_t h3{
+	font-size: 20px;
+	font-weight: 400;
+	margin-bottom: 12px;
+}
+#thiss .container_t p{
+	color: #b0b0b0;
+	font-size: 12px;
+	height: 42px;
+	line-height: 21px;
+	padding:0px 52px;
+	margin-bottom: 16px;
+}
+#thiss .container_t i{
+	display: block;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+#thiss .box_t li{
+	width: 11px;
+	height: 11px;
+	margin-right: 12px;
+	text-align: center;
+	line-height: 7px;
+}
+#thiss .box_t li span {
+	border-radius: 50%;
+	background-color: #b0b0b0;
+	cursor: pointer;
+	display: inline-block;
+	height: 7px;
+	width: 7px;
+    transition:all 0.2s;
+}
+#thiss .things .father{
+	position: relative;
+}
+#thiss .father:hover{
+	box-shadow: 0 10px 15px #d1d0ce;
+}
+#thiss .things .box_t{
+    left: 90px;
+    bottom: 17px;
+    height: 20px;
+    width: 100%;
+	position: absolute;
+	z-index: 3;
+}
+#thiss .chosed{
+	border: 2px solid #FF6709;
+	background-color:#fff !important;
+	height: 7px;
+	width: 7px;
+}
+#thiss .box_t li span:hover{
+	background-color: #FF6709;
+}
+#thiss .btn_t{
+    color: #fff;
+    display: none;
+	top: 190px;
+	height: 48px;
+	position: absolute;
+	width: 100%;
+	z-index: 4;
+	font-size: 16px;
+}
+
+#thiss .btn_t .btn{
+	display: block;
+    height: 20px; 
+    padding:14px 6px;
+    width: 9px;
+    z-index: 6;
+}
+#thiss .btn_t .next_t{
+    margin-left: 275px;
+}
+#video_hr{
+	float: right;
+	text-align: center;
+}
+#video_hr a{
+	color: #424242;
+	float: right;
+	font-size: 16px;
+}
+#video_hr span{
+	display: inline-block;
+	background-color: #b0b0b0;
+	border-radius: 50%;
+	color: #fff;
+	height: 20px;
+
+	margin-left: 5px;
+    padding-top: 2px;
+	width: 22px;
+}
+#container_video li{
+	height: 285px !important;
+	font-size: 14px;
+	text-align: center;
+}
+#container_video p{
+	margin-top:34px ;
+	margin-bottom: 14px;
+}
+#container_video i{
+	color: #b0b0b0;
 }
