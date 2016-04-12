@@ -140,7 +140,7 @@ pagesNode.eq(0).addClass("selected");
 
 //鼠标滑过 上移
 
- $(".container li,#thiss .father").hover(function(){
+ $(".container li,#classify .father").hover(function(){
  	var liMe = $(this);
  	liMe.animate({"marginTop":"-5px"},200);
  	liMe.addClass("hover_me").siblings().removeClass("hover_me");
@@ -173,7 +173,7 @@ pagesNode.eq(0).addClass("selected");
 
 //four_box轮播
 
-  $("#thiss .father").each(function(){
+  $("#thiss .things .father").each(function(){
      $(this).on({
       mouseenter:function(){
          $(this).find(".btn_t").css({"display":"block"});
