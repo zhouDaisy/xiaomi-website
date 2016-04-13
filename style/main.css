@@ -532,6 +532,10 @@
 	margin-left: 13px;
 	position: relative;
  }
+ .container .right img{
+ 	width: 152px;
+ 	height: 152px;
+ }
  .container .hover_me{
     box-shadow: 0 10px 15px #d1d0ce;
  }

@@ -29,16 +29,17 @@ $("#search input").focus(function(){
  //导航标签切换
   $("#logo_box nav ul li").each(function(index){
   	var liNode = $(this);
-  	liNode.mouseover(function(){
+  	liNode.hover(function(){
   		timeroutid = setTimeout(function(){
   			$("#logo_nav_content .selected").removeClass("selected");
 	    	$("#logo_nav_content .logo_nav_content").eq(index).addClass("selected");
   		},300);  	
-    })
-   }).mouseout(function(){
-    	clearTimeout(timeroutid);
-    	$("#logo_nav_content .selected").removeClass("selected");	
-    });   
+    });
+    $("#hor_nav").mouseleave(function(){
+      clearTimeout(timeroutid);
+       $("#logo_nav_content .selected").removeClass("selected");  
+    })  
+  })
   
  //侧边导航
   $("#second_nav nav ul li").each(function(index){
@@ -152,14 +153,15 @@ pagesNode.eq(0).addClass("selected");
 
 //鼠标滑过，橘色方块上移
 
-   $(".right li").on({
-   	 mouseenter:function(){
-   	    // console("111");
-   	    $(this).children(".absolut").css("height","94px")
-   }, mouseleave:function(){
-   	    $(this).children(".absolut").css("height","0px")
-  }
-   });
+$(".things .right li").each(function(){
+    $("li").on({
+       mouseenter:function(){
+          $(this).children(".absolut").css("height","94px")
+    }, mouseleave:function(){
+          $(this).children(".absolut").css("height","0px")
+   }
+    });
+})
 
 
  //标签切换
